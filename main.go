@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"wechat-dat2picture/asset"
 	"wechat-dat2picture/imgtype"
 )
 
@@ -31,14 +32,12 @@ func main() {
 }
 
 func dat2Picture(datPath string, picPath string) {
-	sampleDat := "./sample/color.dat"
-	sampleJpg := "./sample/color.jpg"
-	bytesSampleDat, err := ioutil.ReadFile(sampleDat)
+	bytesSampleDat, err := asset.Asset("sample/color.dat")
 	if err != nil {
 		logrus.Error("readFile for sampleDat error: ", err)
 		return
 	}
-	bytesSampleJpg, err := ioutil.ReadFile(sampleJpg)
+	bytesSampleJpg, err := asset.Asset("sample/color.jpg")
 	if err != nil {
 		logrus.Error("readFile for sampleJpg error: ", err)
 		return
