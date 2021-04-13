@@ -1,0 +1,18 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+test.java
+wechat-dat2picture
+wechat-dat2picture.exe
+png
+jpg
+dat
+pic
+
+
